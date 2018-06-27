@@ -1,9 +1,17 @@
-html, body {
+html, body, .content_container {
     min-width: 375px;
     max-width: 375px;
     min-height: 667px;
     max-height: 667px;
     margin: auto;
+}
+
+.content_container {
+    box-sizing: content-box;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    t
 }
 
 body {
@@ -12,7 +20,7 @@ body {
 
 /* General */
 .bar {
-	position: fixed;
+	position: absolute;
 	height: 8%;
 	min-height: 35pt;
 	border-color: grey;
@@ -34,7 +42,7 @@ body {
 .bottom {
     border-top: 1pt;
     border-top-style: inset;
-    bottom: 86px;
+    top: 611px;
 }
 
 .bar.bottom a {
@@ -112,7 +120,7 @@ body {
 
 .background {
 	position: absolute;
-	padding-top: 35pt;
+	padding-top: 46px;
 	height: 666px;
 	width: 375px;
 	z-index: -3;
@@ -127,25 +135,27 @@ body {
 }
 
 .dog {
-    position: absolute;
-    bottom: 150pt;
-    left: 320pt;
+    position: relative;
+    top: 350px;
+    left: 50px;
+    display: inline;
 }
 
 .btn#outside {
-	position: absolute;
-	bottom: 110pt;
-	right: 275pt;
+	position: relative;
+	top: 380px;
+	left: 240px;
 	color: white;
 	text-shadow: 1pt 1pt 5pt #000;
+    display: inline;
 }
 
 .btn#inside {
-	position: absolute;
-	bottom: 110pt;
-	left: 275pt;
+	position: relative;
+	top: 380px;
 	color: white;
 	text-shadow: 1pt 1pt 5pt #000;
+    display: inline;
 }
 
 .btn#nextDog {
@@ -154,6 +164,7 @@ body {
     right: 0pt;
     color: white;
     text-shadow: 1pt 1pt 5pt #000;
+    display: inline;
 }
 
 .btn#loginBttn {
@@ -163,54 +174,58 @@ body {
     left: 0pt;
     color: white;
     text-shadow: 1pt 1pt 5pt #000;
+    display: inline;
 }
 
 .bowl1 {
-    height: 5%;
+    height: 40px;
     width: auto;
-    position: absolute;
+    position: relative;
     z-index; 2;
-    right: 39%;
-    top: 42%;
+    left: 233px;
+    top: 140px;
+    display: inline;
 }
 
 .bowl2 {
-    height: 5%;
+    height: 40px;
     width: auto;
-    position: absolute;
+    position: relative;
     z-index; 2;
-    right: 51%;
-    top: 81%;
+    left: 250px;
+    top: 250px;
+    display: inline;
 }
 
 #poop {
     position: absolute;
-    bottom: 155pt;
-    right: 337pt;
+    top: 50%;
+    left: 50%;
     width: 60px;
     height: auto;
+    display: inline;
 }
 
 /* Popup container */
 .popup1 {
-    top: 40%;
-    right: 27%;
-    position: absolute;
+    top: 80px;
+    left: 442px;
+    position: relative;
     display: inline-block;
     cursor: pointer;
 }
 
 .popup2 {
-    top: 80%;
-    right: 60%;
-    position: absolute;
+    top: 175px;
+    left: 287px;
+    position: relative;
     display: inline-block;
     cursor: pointer;
 }
 
 .popup3 {
-    top: 65%;
-    right: 43%;
+    top: 50%;
+    left: 53%;
     position: absolute;
     display: inline-block;
     cursor: pointer;
@@ -418,9 +433,8 @@ body {
 h1#dogName {
     font-size: 40pt;
     text-align: center;
-    position: fixed;
+    position: relative;
     padding-top: 32pt;
-    left: 462px;
     color: white;
     text-shadow: 1pt 1pt 10pt #000;
 }
@@ -431,7 +445,6 @@ p.ownerName {
     text-align: right;
     display: inline;
     position: relative;
-    top: 90pt;
     width: 100%;
     text-shadow: 1pt 1pt 5pt #000;
     color: white;
@@ -450,9 +463,9 @@ p.ownerName#owner {
 }
 
 #profDog {
-    position: absolute;
-    bottom: 186pt;
-    left: 385pt;
+    position: relative;
+    top: 145pt;
+    left: 105pt;
 }
 
 p#breed {
@@ -582,34 +595,40 @@ a#loginBtn{
     display: inline;
 }
 
+.textcontainer {
+    position: absolute;
+    left: 50%;
+    width: 20%;
+}
+
 #title1 {
     position: absolute;
-    left: 345pt;
+    left: -100px;
 }
 
 #title2 {
     position: absolute;
-    right: 315pt;
+    left: 10px;
 }
 
 #title3 {
     position: absolute;
-    left: 340pt;
+    left: -125px;
 }
 
 #title4 {
     position: absolute;
-    right: 325pt;
+    left: 30px;
 }
 
 #title5 {
     position: absolute;
-    left: 340pt; 
+    left: -130px;
 }
 
 #title6 {
     position: absolute;
-    right: 325pt;   
+    left: 30px;
 }
 
 /* Locations */
@@ -663,15 +682,13 @@ a#loginBtn{
 }
 
 #signupDog {
-    position: fixed;
-    left: 35%;
-    top: 150pt;
+    position: relative;
+    left: 36%;
 }
 
 #signupBreed {
     font-size: 2em;
-    position: fixed;
-    top: 250pt;
+    position: relative;
     width: 100%;
     text-align: center;
 }
@@ -684,24 +701,23 @@ a#loginBtn{
     border: 2px;
     border-color: darkgrey;
     margin: auto;
-    position: fixed;
-    top: 275pt;
+    position: relative;
     left: 38%;
-}
-
-.btn#signPrev {
-    font-size: 2em;
-    position: fixed;
-    top: 200pt;
-    left: 50pt;
-    color: darkgrey;
 }
 
 .btn#signNext {
     font-size: 2em;
-    position: absolute;
-    top: 200pt;
-    right: 50pt;
+    position: relative;
+    top: -100pt;
+    left: 233pt;
+    color: darkgrey;
+}
+
+.btn#signPrev {
+    font-size: 2em;
+    position: relative;
+    top: -100pt;
+    left: -45pt;
     color: darkgrey;
 }
 
